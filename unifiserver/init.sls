@@ -29,4 +29,4 @@ ubiquiti:
     - mode: 775
     - source: salt://unify/unifi
     - require:
-      - pkg: unifi
+      - pkg: unifi-beta
