@@ -27,6 +27,6 @@ ubiquiti:
 /etc/init.d/unifi:
   file.managed:
     - mode: 775
-    - source: salt://unify/unifi
+    - source: salt://unifiserver/unifi
     - require:
       - pkg: unifi-beta
