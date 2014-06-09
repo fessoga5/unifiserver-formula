@@ -2,9 +2,6 @@
 # vim: sts=2 ts=2 sw=2 expandtab autoindent
 #
 #Add repo for unifi
-vlan:
-  pkg.installed
-
 mongodb:
   pkgrepo.managed:
     - name: deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen 
