@@ -20,6 +20,15 @@ ubiquiti:
     - name: unifi-beta 
     - refresh: True
 
+libmongodb-perl:
+  pkg.latest:  
+    - name: libmongodb-perl
+    - refresh: True
+
+libswitch-perl:
+  pkg.latest:  
+    - name: libswitch-perl 
+    - refresh: True
 #  pkg.latest:
 #    - name: mongodb 
 #    - refresh: True
@@ -28,5 +37,12 @@ ubiquiti:
   file.managed:
     - mode: 775
     - source: salt://unifiserver/unifi
+    - require:
+      - pkg: unifi-beta
+
+/usr/local/sbin/unifi_miner.pl:
+  file.managed:
+    - mode: 775
+    - source: salt://unifiserver/unifi_miner.pl
     - require:
       - pkg: unifi-beta
